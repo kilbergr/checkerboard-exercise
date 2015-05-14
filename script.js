@@ -1,3 +1,10 @@
+
+var randInterval;
+
+function randomChange(){
+	randInterval = setInterval(randomColor, 1000);
+}
+
 function randomColor(){
 	var randNum = Math.floor(Math.random()*255);
 	return randNum;
@@ -13,4 +20,5 @@ var checkerboard = function(){
 			document.body.appendChild(newDiv);
 	}
 }
+
 checkerboard();
