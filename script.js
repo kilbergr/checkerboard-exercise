@@ -2,8 +2,15 @@
 var randInterval;
 
 function randomChange(){
-	randInterval = setInterval(randomColor, 1000);
+	randInterval = setInterval(checkerboard, 1000);
 }
+
+
+/* Also tried as follows:
+function randomChange(){
+	randInterval = setInterval(checkerboard, 1000);
+}
+*/
 
 function randomColor(){
 	var randNum = Math.floor(Math.random()*255);
