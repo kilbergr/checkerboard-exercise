@@ -1,16 +1,27 @@
-function randomColor(){
-	var randNum = Math.floor(Math.random()*255);
-	return randNum;
-	}
 
 var checkerboard = function(){
 	for (var i = 0; i <= 100; i++){
-           	var newDiv = document.createElement("div");
+		if (i%2 === 0){
+			var newDiv = document.createElement("div");
+			newDiv.style.paddingBottom = "11.1%";
+			newDiv.style.backgroundColor = "rgb(83, 219, 201)";
+			newDiv.style.width= "11.1%";
+			newDiv.style.float="left";
+			document.body.appendChild(newDiv);
+		} else if (i%2 === 1){
+			var newDiv = document.createElement("div");
 			newDiv.style.paddingBottom = "11.1%";
 			newDiv.style.width= "11.1%";
-			newDiv.style.float="left";	
-			newDiv.style.backgroundColor ="rgb(" + randomColor() + ", " + randomColor() + ", " + randomColor() + ")";
-			document.body.appendChild(newDiv);
+			newDiv.style.float="left";
+			var j = 0;
+			while(j < 255){
+				newDiv.style.backgroundColor ="rgb(219, 83, " + j + ")";
+				document.body.appendChild(newDiv);
+				j+=10;
+			}
+		}
+
 	}
 }
 checkerboard();
+ 
